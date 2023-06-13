@@ -7,8 +7,8 @@ export const Social = () => {
     <div className="container-social" id="social">
       <br />
       <br />
-      <div className="grid grid-cols-3 gap-1 text-center">
-        <div className="col-start-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 text-center px-16 md:px-0">
+        <div className="md:col-start-2">
           <p className="text-xs text-orange-300 tracking-wide">CONTACT</p>
           <p className="text-3xl font-medium text-white my-2">Ways To Contact Me</p>
           <p className="text-xs md:text-sm text-slate-300 leading-relaxed">Contact me now and let's discuss how I can provide you with top-notch services, ensuring a seamless and impactful online presence for your business.</p>
@@ -35,7 +35,7 @@ export const Social = () => {
         </div>
         <div className="px-5 py-2 md:col-span-2" style={{ backgroundColor: '#2c2d32' }}>
           <FontAwesomeIcon icon={faInstagram} style={{ color: '#ffffff' }} />
-          <p className="inline text-sm text-orange-300 ml-3">@nieldwipaska</p>
+          <p className="inline text-sm text-orange-300 ml-3">@neeyeol.official</p>
         </div>
       </div>
       <br />

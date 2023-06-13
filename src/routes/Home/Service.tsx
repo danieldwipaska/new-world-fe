@@ -7,7 +7,7 @@ export const Service = () => {
     <div className="container-service text-center" id="service">
       <br />
       <br />
-      <div className="grid grid-cols-3 gap-1">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 px-10 md:px-0">
         <div className="col-start-2">
           <p className="text-xs text-orange-300 tracking-wide">SERVICES</p>
           <p className="text-3xl font-medium text-white my-2">What I Am Great At </p>
@@ -15,22 +15,22 @@ export const Service = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-6 gap-3 mt-8">
-        <div className="md:col-start-2 mx-2 md:mx-0 px-5 py-10" style={{ backgroundColor: '#2c2d32' }}>
+        <div className="md:col-start-2 mx-2 md:mx-0 px-5 py-10 hover:scale-105 transition duration-200" style={{ backgroundColor: '#2c2d32' }}>
           <FontAwesomeIcon icon={faLaptopCode} style={{ color: '#cacaca' }} className="fa-3x" />
           <p className="text-base text-white mt-4">Static Websites</p>
           <p className="text-xs text-slate-300 mx-3 mt-2">for professional, community & company</p>
         </div>
-        <div className="py-10 px-5" style={{ backgroundColor: '#2c2d32' }}>
+        <div className="py-10 px-5 hover:scale-105 transition duration-200" style={{ backgroundColor: '#2c2d32' }}>
           <FontAwesomeIcon icon={faDatabase} style={{ color: '#cacaca' }} className="fa-3x" />
           <p className="text-base text-white mt-4">Back-End Development</p>
           <p className="text-xs text-slate-300 mx-3 mt-2">for developers who need a back-end application</p>
         </div>
-        <div className="py-10 px-5" style={{ backgroundColor: '#2c2d32' }}>
+        <div className="py-10 px-5 hover:scale-105 transition duration-200" style={{ backgroundColor: '#2c2d32' }}>
           <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#cacaca' }} className="fa-3x" />
           <p className="text-base text-white mt-4">Whatsapp Automation</p>
           <p className="text-xs text-slate-300 mx-3 mt-2">for personal business and government</p>
         </div>
-        <div className="py-10 px-5" style={{ backgroundColor: '#2c2d32' }}>
+        <div className="py-10 px-5 hover:scale-105 transition duration-200" style={{ backgroundColor: '#2c2d32' }}>
           <FontAwesomeIcon icon={faRocket} style={{ color: '#cacaca' }} className="fa-3x" />
           <p className="text-base text-white mt-4">Web Application</p>
           <p className="text-xs text-slate-300 mx-3 mt-2">for specific system demands</p>

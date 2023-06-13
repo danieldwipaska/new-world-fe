@@ -3,8 +3,8 @@ export const Stack = () => {
     <div className="container-stack text-center" id="stack">
       <br />
       <br />
-      <div className="grid grid-cols-3 gap-1">
-        <div className="col-start-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+        <div className="md:col-start-2">
           <p className="text-xs text-orange-300 tracking-wide">TECH STACKS</p>
           <p className="text-3xl font-medium text-white my-2">What I Frequently Use</p>
           <p className="text-xs md:text-sm text-slate-300 leading-relaxed">From development to deployment</p>
