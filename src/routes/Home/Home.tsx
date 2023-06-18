@@ -6,7 +6,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Service } from './Service';
 import { Stack } from './Stack';
 import { Social } from './Social';
-import { Copyright } from './Copyright';
+import { Copyright } from '../../components/Copyright';
 import { Link } from 'react-scroll';
 import { Nav } from './Nav';
 import { useSpring, animated } from 'react-spring';

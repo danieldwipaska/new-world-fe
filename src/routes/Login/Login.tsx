@@ -35,12 +35,12 @@ export const Login = () => {
   return (
     <div className="section font-sans">
       <Navbar />
-      <div className="grid grid-cols-3 my-16">
-        <div className="col-start-2 bg-orange-300 rounded-xl px-5 py-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 my-16 px-3 lg:px-0">
+        <div className="col-start-1 md:col-start-2 md:col-span-2 lg:col-start-2 lg:col-span-1 bg-orange-300 rounded-xl px-5 py-5">
           <p className="text-black text-xl text-center mt-4 italic inline">Admin Only</p>
           <p className="text-red-700 text-sm text-center mt-4">{err}</p>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="grid grid-cols-4 mt-10 ml-4">
+            <div className="grid grid-cols-4 gap-2 mt-10 ml-4">
               <div>
                 <label htmlFor="username">Username</label>
               </div>
@@ -49,7 +49,7 @@ export const Login = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-4 mt-3 ml-4">
+            <div className="grid grid-cols-4 gap-2 mt-3 ml-4">
               <div>
                 <label htmlFor="password">Password</label>
               </div>

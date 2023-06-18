@@ -6,6 +6,12 @@
   html {
     scroll-behavior: smooth;
   }
+  ol,
+  ul {
+    list-style: inherit;
+    margin-left: 10px;
+    padding-left: 35px;
+  }
 }
 
 body {

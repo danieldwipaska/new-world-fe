@@ -29,6 +29,7 @@ export const ContentTiles = (props: any) => {
 
   const printPost = () => {
     const post = { title, desc, content, categories };
+
     axios
       .post('https://b4pu21och1.execute-api.ap-southeast-3.amazonaws.com/prod/api/posts', post, {
         headers: {
