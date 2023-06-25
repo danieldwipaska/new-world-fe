@@ -27,7 +27,7 @@ export const Article = () => {
   });
 
   return (
-    <div className="section">
+    <div className="section font-serif">
       <Navbar />
       <Title post={post} spin={loadingSpin} />
       <Content post={post} spin={loadingSpin} />

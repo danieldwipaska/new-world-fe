@@ -11,6 +11,7 @@ export const ContentTiles = (props: any) => {
   const [desc, setDesc] = useState('');
   const [content, setContent] = useState('');
   const [categories, setCategories] = useState('');
+  const [thumbnail, setThumbnail] = useState('');
 
   const readTitle = (event: any) => {
     setTitle(event.target.value);
@@ -24,18 +25,33 @@ export const ContentTiles = (props: any) => {
   const readCategories = (event: any) => {
     setCategories(event.target.value);
   };
+  const readThumbnail = (event: any) => {
+    setThumbnail(event.target.files[0]);
+  };
 
   const navigate = useNavigate();
 
-  const printPost = () => {
-    const post = { title, desc, content, categories };
+  const printPost = (event: any) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    if (thumbnail) {
+      formData.append('file', thumbnail);
+      formData.append('title', title);
+      formData.append('desc', desc);
+      formData.append('content', content);
+      formData.append('categories', categories);
+    }
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('access-token')}`,
+        'content-type': 'multipart/form-data',
+      },
+    };
 
     axios
-      .post('https://b4pu21och1.execute-api.ap-southeast-3.amazonaws.com/prod/api/posts', post, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('access-token')}`,
-        },
-      })
+      .post('https://b4pu21och1.execute-api.ap-southeast-3.amazonaws.com/prod/api/posts', formData, config)
       .then(function (response) {
         // console.log(response);
         props.refetch();
@@ -130,6 +146,17 @@ export const ContentTiles = (props: any) => {
             </div>
             <div className="col-span-3">
               <input className="rounded-md drop-shadow-sm text-white ml-2 px-2" type="text" name="categories" style={{ backgroundColor: '#3d3d3d', minHeight: '30px' }} onChange={readCategories} />
+            </div>
+          </div>
+          <div className="grid grid-cols-5 mt-4">
+            <div className="ml-3">
+              <p className="text-slate-300 text-base">Thumbnail</p>
+            </div>
+            <div className="col-span-3">
+              <input className="rounded-md drop-shadow-sm text-white ml-2 px-2" type="file" onChange={readThumbnail} />
+            </div>
+            <div className="ml-2">
+              <p className="text-sm text-slate-300 text-base">min. 400x400px</p>
             </div>
           </div>
         </div>

@@ -23,20 +23,20 @@ export const Blog = () => {
   });
 
   return (
-    <div className="section">
+    <div className="section font-serif">
       <Navbar />
-      <div className="grid border border-gray-500 grid-cols-1 mt-4 mx-2 md:mx-20 py-4 md:py-16 px-14">
-        <div>
-          <p className="text-5xl text-white text-bold">Reaching State of The Art</p>
+      <div className="grid grid-cols-1 mt-4 mx-2 md:mx-20 py-4 md:pt-16 md:pb-5 md:px-14 px-5">
+        <div className="mt-9 md:mt-4">
+          <p className="font-sans text-5xl text-white text-bold font-serif">Thought & Writings</p>
         </div>
         <div className="mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div>
-              <p className="text-sm text-gray-400 leading-7">"I love Physics, Computer Science, and Music, for these three fields will guide us making better World."</p>
+              <p className="text-sm text-gray-400 leading-7 font-serif">"I love Physics, Computer Science, and Music, for these three fields will guide us making better World."</p>
             </div>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="mt-7">
           <Nav setCat={setCategory} />
         </div>
       </div>

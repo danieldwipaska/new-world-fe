@@ -43,7 +43,7 @@ export const Dashboard = () => {
   }, [navigate]);
 
   return (
-    <div className="section font-sans">
+    <div className="section font-serif">
       <br />
       <div className="grid grid-cols-4 mt-5">
         <div className="bg-orange-300"></div>

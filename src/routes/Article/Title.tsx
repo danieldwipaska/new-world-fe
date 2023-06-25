@@ -13,10 +13,10 @@ export const Title = (props: any) => {
           </div>
         ) : (
           <div className="col-start-1 md:col-start-2 md:col-span-2 bg-slate-300 shadow-lg rounded-md py-5 px-6" style={{ backgroundColor: '#34353a' }}>
-            <p className="text-xs text-gray-300 text-center mb-3 font-semibold font-sans tracking-widest">{props.post ? props.post.categories.toUpperCase() : null}</p>
+            <p className="text-xs text-orange-300 text-center mb-3 font-semibold font-sans tracking-widest">{props.post ? props.post.categories.toUpperCase() : null}</p>
             <p className="text-4xl text-white text-center font-sans font-medium subpixel-antialiased">{props.post ? props.post.title : null}</p>
             <p className="text-sm text-gray-400 text-center italic font-mono font-medium subpixel-antialiased mt-4">{props.post ? props.post.desc : null}</p>
-            <p className="text-center border border-gray-500 text-center mx-auto mt-5" style={{ width: '50px' }}></p>
+            <p className="text-center border border-orange-300 text-center mx-auto mt-5" style={{ width: '50px' }}></p>
             <p className="text-xs text-gray-500 text-center font-mono font-medium subpixel-antialiased mt-4">By Daniel Kamasi on {date.toDateString()}</p>
           </div>
         )}

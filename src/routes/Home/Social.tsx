@@ -9,9 +9,9 @@ export const Social = () => {
       <br />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-1 text-center px-16 md:px-0">
         <div className="md:col-start-2">
-          <p className="text-xs text-orange-300 tracking-wide">CONTACT</p>
-          <p className="text-3xl font-medium text-white my-2">Ways To Contact Me</p>
-          <p className="text-xs md:text-sm text-slate-300 leading-relaxed">Contact me now and let's discuss how I can provide you with top-notch services, ensuring a seamless and impactful online presence for your business.</p>
+          <p className="text-xs text-orange-300 tracking-wide font-serif">CONTACT</p>
+          <p className="text-3xl font-medium text-white my-2 font-serif">Ways To Contact Me</p>
+          <p className="text-xs md:text-sm text-slate-300 leading-relaxed font-serif">Contact me now and let's discuss how I can provide you with top-notch services, ensuring a seamless and impactful online presence for your business.</p>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-8 gap-4 mt-10">

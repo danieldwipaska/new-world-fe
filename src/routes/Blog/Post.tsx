@@ -1,5 +1,6 @@
 import { faCalendarDay, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Buffer } from 'buffer';
 
 export const Post = (props: any) => {
   const parseCreatedAt = (createAt: any) => {
@@ -13,7 +14,8 @@ export const Post = (props: any) => {
     return posts?.map((post: any) => {
       return (
         <div className="md:hover:scale-105 transition duration-150">
-          <p className="text-base text-gray-300 font-bold mt-12 mx-4">{post.title}</p>
+          <img src={`data:${post.thumbnail.imgType};base64,${Buffer.from(post.thumbnail.data).toString('base64')}`} alt="No Alt" className="rounded-xl" />
+          <p className="text-base text-gray-300 font-bold mt-6 mx-4">{post.title}</p>
           <p className="text-xs text-zinc-400 mt-5 mx-4 leading-6">{post.desc}</p>
           <p className="border border-zinc-700 mt-3 mx-4"></p>
           <div className="text-center mt-4">
@@ -41,7 +43,8 @@ export const Post = (props: any) => {
 
     return filteredPost?.map((post: any) => {
       return (
-        <div className="">
+        <div className="md:hover:scale-105 transition duration-150">
+          <img src={`data:${post.thumbnail.imgType};base64,${Buffer.from(post.thumbnail.data).toString('base64')}`} alt="No Alt" className="rounded-xl" />
           <p className="text-base text-gray-300 font-bold mt-5 mx-4">{post.title}</p>
           <p className="text-xs text-zinc-400 mt-5 mx-4 leading-6">{post.desc}</p>
           <p className="border border-zinc-700 mt-3 mx-4"></p>

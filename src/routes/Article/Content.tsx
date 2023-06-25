@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useState } from 'react';
+import monochromeProfilePhoto from '../../monochrome-profile.jpg';
 
 import { Link } from 'react-router-dom';
 
@@ -43,7 +44,9 @@ export const Content = (props: any) => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-9 gap-3 mt-7">
         <div className="hidden md:block col-span-2 md:mx-16">
-          <div className="grid grid-cols-3 border mt-2">
+          <p className="text-gray-200 text-sm font-serif leading-6 font-sans tracking-widest">SHARE</p>
+          <p className="text-center border border-orange-300 mt-5" style={{ width: '50px' }}></p>
+          <div className="grid grid-cols-3 border mt-7">
             <div className="border border-gray-600 text-center">
               <Link to={`http://www.linkedin.com/shareArticle?mini=true&url=${window.location}`} target="_blank">
                 <FontAwesomeIcon icon={faLinkedin} className="py-2 mt-2 hover:scale-125 transition duration-150" style={{ color: '#ffffff' }} />
@@ -75,15 +78,23 @@ export const Content = (props: any) => {
               </Link>
             </div>
           </div>
+          <p className="text-gray-200 text-sm font-serif leading-6 font-sans tracking-widest mt-20">WRITER</p>
+          <p className="text-center border border-orange-300 mt-5" style={{ width: '50px' }}></p>
+          <div className="mt-10 text-center">
+            <img src={monochromeProfilePhoto} alt="Monochrome Profile" className="rounded-full" />
+            <p className="text-lg text-slate-300 mt-8">Daniel Kamasi</p>
+            <p className="text-xs italic text-slate-300 mt-2">Software Engineer</p>
+            <p className="text-xs italic text-slate-300 mt-1">Technophile</p>
+          </div>
         </div>
-        <div className="md:col-span-4 mx-10 md:ml-0">
+        <div className="md:col-span-4 mx-7 md:ml-0">
           <p className="text-gray-200">
             <div dangerouslySetInnerHTML={{ __html: props.post ? props.post.content : null }}></div>
           </p>
         </div>
         <div className="hidden md:block md:col-span-3 mx-7">
           <p className="text-gray-200 text-sm font-serif leading-6 font-sans tracking-widest">OTHER ARTICLES</p>
-          <p className="text-center border border-gray-400 mt-5" style={{ width: '50px' }}></p>
+          <p className="text-center border border-orange-300 mt-5" style={{ width: '50px' }}></p>
 
           {!loadingSpin ? (
             <div className="text-center">
