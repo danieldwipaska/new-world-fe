@@ -15,9 +15,9 @@ export const Navbar = () => {
       <NavLink to="/blog" className="font-semibold px-3 py-2 mt-2 rounded-lg text-white hover:bg-slate-100 hover:text-slate-900">
         Blog
       </NavLink>
-      <NavLink to="/login" className="italic px-3 py-2 mt-2 rounded-lg text-white hover:bg-orange-300 hover:text-slate-900">
+      {/* <NavLink to="/login" className="italic px-3 py-2 mt-2 rounded-lg text-white hover:bg-orange-300 hover:text-slate-900">
         Admin
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };

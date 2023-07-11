@@ -51,7 +51,7 @@ export const ContentTiles = (props: any) => {
     };
 
     axios
-      .post('https://b4pu21och1.execute-api.ap-southeast-3.amazonaws.com/prod/api/posts', formData, config)
+      .post('http://localhost:8800/api/posts', formData, config)
       .then(function (response) {
         // console.log(response);
         props.refetch();
